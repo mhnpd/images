@@ -21,7 +21,7 @@ function cecho(){
 }
 
 cecho "Installing Package" green
-sudo apt install jpegoptim zopfli -y -qq
+sudo apt install jpegoptim optipng -y -qq
 
 cecho "Starting to optimize JPG & JPEG files" blue 
 
@@ -29,5 +29,13 @@ jpegoptim -qq --force ./**.jpg
 jpegoptim -qq --force ./**.jpeg
 
 cecho "JPG & jpeg image optimization completed." green
+
+cecho "Starting to optimize PNG files" blue 
+
+optipng --silent -o 1 ./**.png
+
+cecho "png image optimization completed." green
+
+
 
 
