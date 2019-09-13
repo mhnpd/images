@@ -25,14 +25,14 @@ sudo apt install jpegoptim optipng -y -qq
 
 cecho "Starting to optimize JPG & JPEG files" blue 
 
-jpegoptim -qq --force ./**.jpg
-jpegoptim -qq --force ./**.jpeg
+jpegoptim -qq --force --strip-all –max=90 ./**.jpg
+jpegoptim -qq --force --strip-all –max=90 ./**.jpeg
 
 cecho "JPG & jpeg image optimization completed." green
 
 cecho "Starting to optimize PNG files" blue 
 
-optipng --silent -o 1 ./**.png
+optipng -o7 -f4 -strip all ./**.png
 
 cecho "png image optimization completed." green
 
